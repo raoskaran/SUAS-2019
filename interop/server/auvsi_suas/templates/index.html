@@ -1,0 +1,54 @@
+<!-- Main Application Page --!>
+<!DOCTYPE html>
+{% load pipeline %}
+
+<html lang="en" ng-app="auvsiSuasApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AUVSI SUAS Server</title>
+    {% stylesheet 'styles' %}
+    {% javascript 'scripts' %}
+</head>
+
+<body>
+    <!-- Navigation --!>
+    <nav class="navbar navbar-expand navbar-dark bg-dark shadow" ng-controller="NavigationCtrl as navigationCtrl">
+        <div class="container">
+            <a class="navbar-brand" href="/#!/">
+                AUVSI SUAS Interop Server
+            </a>
+
+            {% verbatim %}
+            <ul class="navbar-nav" ng-cloak>
+                <li class="nav-item dropdown" ng-if="navigationCtrl.shouldShowMissionLinks()">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown">
+                        Mission
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" ng-repeat="link in navigationCtrl.getMissionLinks()"
+                           href="{{link.url}}" target="{{link.target}}">
+                            {{link.text}}
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown">
+                        System
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" ng-repeat="link in navigationCtrl.getLinks()"
+                           href="{{link.url}}" target="{{link.target}}">
+                            {{link.text}}
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            {% endverbatim %}
+        </div>
+    </nav>
+
+    <!-- Route specific view --!>
+    <div class="container" ng-view></div>
+</body>
+</html>

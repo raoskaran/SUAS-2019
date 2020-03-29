@@ -1,0 +1,25 @@
+<div class="card team-status {{teamStatusCtrl.getTeamColorClasses()}} p-1" ng-show="teamStatusCtrl.shouldShow()" ng-cloak>
+    <div class="card-body">
+        <h4 class="card-title">{{teamStatusCtrl.team.team.university}} ({{teamStatusCtrl.team.team.username}})</h4>
+        <div class="row">
+            <div class="team-status-icon col-1" ng-show="teamStatusCtrl.isActive()"
+                  title="Sending Telemtry">
+                &#8633;  <!-- LEFTWARDS ARROW TO BAR OVER RIGHTWARDS ARROW TO BAR --!>
+            </div>
+            <div class="team-status-icon col-1" ng-show="teamStatusCtrl.team.inAir"
+                  title="In Air">
+                &#9992;  <!-- AIRPLANE --!>
+            </div>
+            <div class="col"></div>
+            <div class="col-3">
+                Lat: {{teamStatusCtrl.team.telemetry.latitude | number : 6}}
+            </div>
+            <div class="col-3">
+                Lon: {{teamStatusCtrl.team.telemetry.longitude | number: 6}}
+            </div>
+            <div class="col-3">
+                Alt: {{teamStatusCtrl.team.telemetry.altitude | number: 1}}
+            </div>
+        </div>
+    </div>
+</div>

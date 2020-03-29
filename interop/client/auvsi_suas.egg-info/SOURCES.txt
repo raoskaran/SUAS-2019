@@ -1,0 +1,7 @@
+setup.py
+auvsi_suas/__init__.py
+auvsi_suas.egg-info/PKG-INFO
+auvsi_suas.egg-info/SOURCES.txt
+auvsi_suas.egg-info/dependency_links.txt
+auvsi_suas.egg-info/requires.txt
+auvsi_suas.egg-info/top_level.txt
