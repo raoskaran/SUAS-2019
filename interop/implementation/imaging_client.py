@@ -1,3 +1,7 @@
+# SEND IMAGES AND THEIR LAT,LON,ALT,HEADING FROM THE UAV
+
+# Run this code on the onboard computer
+
 import socket
 import pickle
 import numpy as np

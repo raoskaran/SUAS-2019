@@ -1,3 +1,7 @@
+# SERVER TO SEND TELEMETRY DATA FROM THE UAV
+
+# Run this on the onboard computer on the UAV
+
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer  
 import os  
 import json

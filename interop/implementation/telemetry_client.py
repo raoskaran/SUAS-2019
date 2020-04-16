@@ -1,5 +1,7 @@
 # GET TELEMETRY DATA FROM THE UAV AND POST IT TO THE INTEROP SERVER
 
+# Run this on your client machine/laptop
+
 import httplib
 import sys
 from auvsi_suas.client import client

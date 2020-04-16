@@ -1,3 +1,7 @@
+# GET IMAGES AND THEIR LAT,LON,ALT,HEADING FROM THE UAV
+
+# Run this on the client machine/laptop
+
 import socket
 import pickle
 import numpy as np

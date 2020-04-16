@@ -1,3 +1,5 @@
+# CODE TO GET MISSION FROM THE INTEROP SERVER
+
 from auvsi_suas.client import client
 from auvsi_suas.proto import interop_api_pb2
 import json
