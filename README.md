@@ -79,4 +79,6 @@ Except telemetry_server.py, all code works with Python3.
 1. Onboard Computer - Raspberry Pi 3B
 
 2. Camera - Raspberry Pi Camera
+
+3. Flight controller - Pixhawk 4
 		
