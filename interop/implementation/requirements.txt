@@ -1,0 +1,14 @@
+json
+pickle
+protobuf
+pprint
+shapely
+numpy
+utm
+matplotlib
+dronekit
+dronekit-sitl
+Pillow
+opencv-python
+geopy
+tkinter

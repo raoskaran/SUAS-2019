@@ -15,7 +15,7 @@ client = client.Client(url='http://127.0.0.1:8000',
                        username='testuser',
                        password='testpass')
 
-id = int(raw_input('Enter mission id\n'))
+id = input('Enter mission id\n')
 mission = client.get_mission(id)
 
 # pprint(mission)
