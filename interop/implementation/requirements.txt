@@ -10,5 +10,6 @@ dronekit
 dronekit-sitl
 Pillow
 opencv-python
+opencv-contrib-python
 geopy
 tkinter

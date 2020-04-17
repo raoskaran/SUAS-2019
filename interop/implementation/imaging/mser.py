@@ -36,7 +36,7 @@ for i, contour in enumerate(hulls):
     MinorAxisLength = axes[MIN]
     eccentricity    = np.sqrt(1-(axes[MIN]/axes[MAJ])**2)
     if(aspect_ratio<3 and solidity>0.3 and (extent>0.2 and extent<0.9) and eccentricity<0.995):
-        #cv2.imwrite('{}.jpg'.format(i), img[y-50:y+h+50,x-50:x+w+50])
+        cv2.imwrite('test/{}.jpg'.format(i), img[y-10:y+h+10,x-10:x+w+10])
         hulls1.append(contour)
     else:
          continue
