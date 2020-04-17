@@ -2,11 +2,12 @@
 
 # Run this on your client machine/laptop
 
-import httplib
+import http.client
 import sys
 from auvsi_suas.client import client
 from auvsi_suas.proto import interop_api_pb2
 import json,time
+
 client = client.Client(url='http://127.0.0.1:8000',
                        username='testuser',
                        password='testpass')
@@ -19,7 +20,7 @@ client = client.Client(url='http://127.0.0.1:8000',
 # get http server ip
 http_server = '127.0.0.1'
 # create a connection
-conn = httplib.HTTPConnection(http_server)
+conn = http.client.HTTPConnection(http_server)
 
 while 1:
     cmd = 'GET telemetry.json'

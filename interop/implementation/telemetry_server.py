@@ -5,7 +5,6 @@
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer  
 import os  
 import json
-from scandir import scandir
 import dronekit as dk
 
 connection_string = ""
@@ -25,6 +24,7 @@ class MavHTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'application/json')
         self.end_headers() 
         self.wfile.write(json.dumps({'latitude':lat, 'longitude':lon, 'altitude':alt, 'heading':heading}))
+        # self.wfile.write(json.dumps({'latitude':20.5937, 'longitude':78.9629, 'altitude':300, 'heading':353})) #Testing
         return 
 
 def run():  

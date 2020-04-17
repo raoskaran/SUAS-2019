@@ -2,7 +2,7 @@ import tkinter as tk
 from PIL import Image,ImageTk
 from tkinter import ttk
 import os, json
-import ip
+import cv2
 import image2globalcoords
 
 false = False
@@ -56,7 +56,7 @@ def save_coords(event):
         global img_name
         click_loc = [event.x, event.y]
         print ("you clicked on", click_loc)
-        loc = ip.geoloc(event.x, event.y, lat, lon, heading)
+        loc = image2globalcoords.geoloc(event.x, event.y, lat, lon, heading)
         obj["latitude"] = loc[0]
         obj["longitude"] = loc[1]
         print(click_loc)
